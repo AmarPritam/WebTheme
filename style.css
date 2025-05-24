@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-color: hsl(0, 50%, 90%);
+  --secondary-color: hsl(0, 50%, 10%);
+  --tertiary-color: hsl(60, 80%, 20%);
+  --accent-color: hsl(300, 80%, 20%);
+  --white: #ffffff88;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: max(10%, 100px) 0;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10vw;
+}
+
+nav h1{
+  color: var(--tertiary-color);
+}
+
+nav button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  background-color: var(--white);
+  color: var(--secondary-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max(80vw, 300px);
+  min-height: 400px;
+  flex-wrap: wrap;
+}
+
+.left {
+  padding: 30px;
+  height: 100%;
+  flex-basis: 50%;
+  max-width: 500px;
+  flex: 1 1 auto;
+}
+
+.left h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.left h1 span {
+  color: var(--tertiary-color);
+  font-size: 50px;
+}
+
+.left p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+  letter-spacing: .3px;
+}
+
+.left button {
+  padding: 9px 17px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  border: 2px solid var(--tertiary-color);
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  letter-spacing: .7px;
+}
+
+.left button.codepen {
+  background: transparent;
+  color: var(--tertiary-color);
+}
+
+.left .slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.left .slider #slider {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+.left .slider #slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 7px;
+  height: 20px;
+  background: var(--accent-color);
+  border-radius: 20px;
+}
+
+.left .slider #value {
+  width: 45px;
+  height: 30px;
+  border: 1px solid var(--accent-color);
+  outline: none;
+  background: none;
+  border-radius: 4px;
+  color: var(--accent-color);
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.left .slider span {
+  font-size: 18px;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* RIGHT SECTION STYLING */
+
+.right {
+  flex-basis: 50%;
+  min-height: 400px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.right pre {
+  height: 100%;
+  color: var(--secondary-color);
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: .6px;
+  font-weight: 500;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+}
+
+.right button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 7px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .left {
+    flex: 1;
+  }
+  
+  .right {
+    align-items: center;
+    flex: 1;
+  }
+  
+  .right pre {
+    font-size: 10px;
+  }
+  
+  .right button {
+    padding: 5px 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  
+  .left {
+    flex: 1;
+  }
+  
+  .right {
+    padding: 30px max(5%, 30px);
+    flex: 1;
+  }
+  
+  .right pre {
+    font-size: 12px;
+  }
+  
+  .right button {
+    padding: 5px 10px;
+  }
+}
